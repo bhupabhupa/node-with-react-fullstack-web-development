@@ -22,7 +22,7 @@ passport.use(new GoogleStrategy({
     callbackURL: '/auth/google/callback',
     proxy: true
 }, (accessToken, refreshToken, profile, done) => {
-	// console.log('access Token : ',accessToken);
+	 console.log('access Token : ',accessToken);
 	// console.log('refresh Token : ',refreshToken);
     // console.log('profile : ',profile);
     User.findOne({ googleId: profile.id})
